@@ -17,6 +17,7 @@
 
 const { Client, GatewayIntentBits, ActivityType, TextChannel } = require('discord.js');
 require('dotenv').config();
+const keep_alive = require('./keep_alive.js')
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
@@ -36,7 +37,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["Watching Netflix","Listening to Spotify","Playing GTA VI"];
+const statusMessages = ["Watching EMAD","Listening to EMAD","Playing EMAD"];
 
 
 let currentIndex = 0;
