@@ -22,8 +22,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const Discord = require("discord.js");
-const client = new Discord.Client();
-const client = new Client({
+const client = new Discord.Client({
   intents: Object.keys(GatewayIntentBits).map((a) => {
     return GatewayIntentBits[a];
   }),
