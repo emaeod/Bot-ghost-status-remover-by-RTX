@@ -20,8 +20,7 @@ require('dotenv').config();
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const Discord = require("discord.js");
-const client = new Discord.Client({
+const client = new Client({
   intents: Object.keys(GatewayIntentBits).map((a) => {
     return GatewayIntentBits[a];
   }),
@@ -37,35 +36,11 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["Watching EMAD","Listening to EMAD","Playing EMAD"];
+const statusMessages = ["Listening to ViTK","Watching ViTK"];
 
 
 let currentIndex = 0;
 const channelId = '';
-
-const { EmbedBuilder } = require(`discord.js`);
-
-module.exports - {
-  data: new SlashCommandBuilder()
-  .setName(`embed`)
-  .setDescription(`Hitest`),
-  async execute(interaction) {
-
-    const embed1 = new EmbedBuilder()
-    .setColor("Blurple")
-    .setTitle('THE EMBED TITLE')
-    .setURL('')
-    .setAuthor({ name: ``, iconURL: ``})
-    .setDescription('tetsssss')
-    .setThumbnail('')
-    .addFields({ name: "hello", value: "hi", inline: true})
-    .addFields({ name: "hello", value: "hi", inline: false})
-    .setImage(``)
-    .setTimestamp()
-
-    await interaction.reply({ embeds: [embed1] })
-  }
-}
 
 async function login() {
   try {
