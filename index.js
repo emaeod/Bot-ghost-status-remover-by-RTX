@@ -21,6 +21,8 @@ const keep_alive = require('./keep_alive.js')
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const Discord = require("discord.js");
+const client = new Discord.Client();
 const client = new Client({
   intents: Object.keys(GatewayIntentBits).map((a) => {
     return GatewayIntentBits[a];
@@ -67,11 +69,9 @@ module.exports - {
     await interaction.reply({ embeds: [embed1] })
   }
 }
-await client.login(process.env.BOT_TOKEN);
 
 async function login() {
-  try Promise.all(
-  urls.map(async (url) => {
+  try {
     await client.login(process.env.TOKEN);
     console.log(`\x1b[36m%s\x1b[0m`, `|    🐇 Logged in as ${client.user.tag}`);
   } catch (error) {
