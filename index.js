@@ -63,7 +63,6 @@ module.exports - {
     .addFields({ name: "hello", value: "hi", inline: false})
     .setImage(``)
     .setTimestamp()
-    .setFooter({ text: "a footer, iconURL: ``})
 
     await interaction.reply({ embeds: [embed1] })
   }
