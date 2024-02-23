@@ -43,7 +43,6 @@ const statusMessages = ["Watching EMAD","Listening to EMAD","Playing EMAD"];
 let currentIndex = 0;
 const channelId = '';
 
-const { SlashCommandBuilder } = require(`@discord.js/builders`);
 const { EmbedBuilder } = require(`discord.js`);
 
 module.exports - {
