@@ -70,7 +70,8 @@ module.exports - {
 await client.login(process.env.BOT_TOKEN);
 
 async function login() {
-  try {
+  try Promise.all(
+  urls.map(async (url) => {
     await client.login(process.env.TOKEN);
     console.log(`\x1b[36m%s\x1b[0m`, `|    🐇 Logged in as ${client.user.tag}`);
   } catch (error) {
