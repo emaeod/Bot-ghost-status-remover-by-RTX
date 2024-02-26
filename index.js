@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["Listening to ViTK","Watching ViTK"];
+const statusMessages = ["جاري تحديث البوت"];
 
 
 let currentIndex = 0;
